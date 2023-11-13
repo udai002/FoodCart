@@ -5,11 +5,14 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { RxCross1 } from 'react-icons/rx'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Signin from './Signin'
 
 const Navbar = () => {
 
     const [sidebar, setSideBar] = useState(false)
-    return (
+    const [loginModal , setLoginModal] = useState(false)
+    return (<>
+        {loginModal?<Signin loginModal={loginModal} setModal={setLoginModal} />:""}
         <div className='bg-blue p-4 text-white flex flex-row justify-between'>
             <div className='flex flex-row items-start'>
                 <div className='mx-2 my-1 md:mx-6 cursor-pointer' onClick={() => { setSideBar(true) }}>
@@ -26,13 +29,14 @@ const Navbar = () => {
                     <form action="#">
                         <input type="text" className='w-40 py-1 px-2 rounded' placeholder='Search for Products' />
                     </form>
-                    <button className='px-2 py-1 rounded border mx-2 md:mx-5'>Signin</button>
+                    <button className='px-2 py-1 rounded border mx-2 md:mx-5' onClick={()=>setLoginModal(true)}>Signin</button>
                     <div className=' hidden md:block'>
                     <AiOutlineShoppingCart className='text-2xl m-1' />
                     <div className='absolute rounded-full bg-red-600 text-white text-center  top-2 right-2 w-6'>
                 <small>1</small>
             </div>
                     </div>
+          
                     
                 </div>
             </div>
@@ -67,6 +71,7 @@ const Navbar = () => {
             </div>
             </motion.div>
         </div>
+        </>
     )
 }
 
