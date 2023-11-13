@@ -7,18 +7,20 @@ const Signin = ({loginModal , setModal}) => {
     
     return (
         <>
-        
-        <div className='flex flex-row justify-center w-full h-[100vh] top-0 z-10 fixed' ref={ref} >
+        <div className='fixed w-full h-[100vh] top-0 z-10 border-2 bg-transparent backdrop-blur-lg bg-white shadow-2xl'>
+
+        </div>
+        <div className='flex flex-row justify-center w-full h-[100vh] top-0 z-10 fixed  shadow-2xl' ref={ref} >
             
             
 
-            <div className='fixed  h-64 w-[80%] md:w-[40%] text-black font bg-white  mt-36 blur-none' >
+            <div className='fixed  h-64 w-[90%] md:w-[40%] text-black font bg-white mt-32 blur-none' >
             <div className='absolute  p-2 rounded-full md:right-20 md:-top-3 -right-4 -top-5 bg-blue w-8 ' onClick={()=>{setModal(false)}}>
                 <RxCross1/>
             </div>
                 <div class="flex bg-white ">
                
-                    <div class="w-full max-w-xs m-auto border-2 bg-slate-100 rounded p-5">
+                    <div class="w-full max-w-xs m-auto border-2  rounded p-5">
                         <header>
                             <img class="w-20 mx-auto mb-5" src="/logo.png" />
                             
@@ -26,11 +28,11 @@ const Signin = ({loginModal , setModal}) => {
                         <form>
                             <div>
                                 <label class="block mb-2 text-blue" for="username">Username</label>
-                                <input class="w-full p-2 mb-6 text-blue border-b-2 border-blue outline-none focus:bg-gray-300" type="text" name="username" />
+                                <input class="w-full p-2 mb-6 text-blue border-b-2 border-blue outline-none focus:bg-gray-300 bg-slate-100" type="text" name="username" />
                             </div>
                             <div>
                                 <label class="block mb-2 text-blue" for="password">Password</label>
-                                <input class="w-full p-2 mb-6 text-blue border-b-2 border-blue outline-none focus:bg-gray-300" type="password" name="password" />
+                                <input class="w-full p-2 mb-6 text-blue border-b-2 border-blue outline-none focus:bg-gray-300 bg-slate-100" type="password" name="password" />
                             </div>
                             <div>
                                 <input class="w-full bg-blue hover:bg-white hover:text-blue text-white font-bold py-2 px-4 mb-6 rounded" type="submit" />
