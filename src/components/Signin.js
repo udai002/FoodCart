@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import {RxCross1} from 'react-icons/rx'
+import Link from 'next/link'
 
 const Signin = ({loginModal , setModal}) => {
     
@@ -14,7 +15,7 @@ const Signin = ({loginModal , setModal}) => {
             
             
 
-            <div className='fixed  h-64 w-[90%] md:w-[40%] text-black font bg-white mt-32 blur-none' >
+            <div className='fixed  h-64 w-[90%] md:w-[40%] text-black font mt-32 ' >
             <div className='absolute  p-2 rounded-full md:right-20 md:-top-3 -right-4 -top-5 bg-blue w-8 ' onClick={()=>{setModal(false)}}>
                 <RxCross1/>
             </div>
@@ -45,7 +46,7 @@ const Signin = ({loginModal , setModal}) => {
                         </form>
                         <footer>
                             <a class="text-blue hover:text-pink-700 text-sm float-left" href="#">Forgot Password?</a>
-                            <a class="text-blue hover:text-pink-700 text-sm float-right" href="#">Create Account</a>
+                            <Link class="text-blue hover:text-pink-700 text-sm float-right" href="/Signup" onClick={()=>{setModal(false)}}>Create Account</Link>
                         </footer>
                     </div>
                     

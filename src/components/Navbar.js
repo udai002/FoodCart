@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Signin from './Signin'
 
+
 const Navbar = () => {
 
     const [sidebar, setSideBar] = useState(false)
@@ -14,7 +15,7 @@ const Navbar = () => {
     return (<>
         {loginModal?<Signin loginModal={loginModal} setModal={setLoginModal} />:""}
         <div className='bg-blue p-4 text-white flex flex-row justify-between'>
-            <div className='flex flex-row items-start'>
+            <div className='flex flex-row items-start m-1'>
                 <div className='mx-2 my-1 md:mx-6 cursor-pointer' onClick={() => { setSideBar(true) }}>
                     <div className='w-8 border-[1px] border-white mb-1.5'></div>
                     <div className='w-8 border-[1px] border-white mb-1.5'></div>
@@ -27,7 +28,7 @@ const Navbar = () => {
             <div className=''>
                 <div className="flex flex-row">
                     <form action="#">
-                        <input type="text" className='w-40 py-1 px-2 rounded' placeholder='Search for Products' />
+                        <input type="text" className='w-40 py-1 px-2 rounded text-black' placeholder='Search for Products' />
                     </form>
                     <button className='px-2 py-1 rounded border mx-2 md:mx-5' onClick={()=>setLoginModal(true)}>Signin</button>
                     <div className=' hidden md:block'>
