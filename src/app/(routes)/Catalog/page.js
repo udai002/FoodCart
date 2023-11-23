@@ -4,10 +4,16 @@ import React, { useState } from 'react'
 import { IoMdArrowDropup } from "react-icons/io";
 // import { useState } from 'react';
 
-const Page = () => {
-
+const useDropdown = ()=>{
   const [categoryName , setCategoryName] = useState('All')
   const [dropDown , setDropDown] = useState(false)
+  return [categoryName , setCategoryName , dropDown , setDropDown]
+}
+
+const Page = () => {
+
+  const [categoryName , setCategoryName , dropDown , setDropDown] = useDropdown()
+ 
   return (
     <div className='p-6 pt-2'>
       <div className=''>
