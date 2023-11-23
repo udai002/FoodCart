@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { IoMdArrowDropup } from "react-icons/io";
 // import { useState } from 'react';
 
-const page = () => {
+const Page = () => {
 
   const [categoryName , setCategoryName] = useState('All')
   const [dropDown , setDropDown] = useState(false)
@@ -47,4 +47,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
