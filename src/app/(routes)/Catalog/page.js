@@ -23,7 +23,7 @@ const Page = () => {
         <div className='md:w-[20vw] hidden md:block m-1'><h1>Category</h1></div>
         <div className='flex flex-row justify-between grow'>
           <div className='flex'>
-            <span className='m-1'>Sort by: </span><button  onClick={()=>{setDropDown(true)}} className='border-black border-[1px] px-2 py-1 flex'>{categoryName}
+            <span className='m-1 hidden md:block'>Sort by: </span><button  onClick={()=>{setDropDown(true)}} className='border-black border-[1px] px-2 py-1 flex'>{categoryName}
              <IoMdArrowDropup className='m-1'/> 
             </button>
             {dropDown?<ul className='absolute ml-16 mt-9 bg-gray-100'>
